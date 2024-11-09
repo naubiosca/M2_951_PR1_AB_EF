@@ -23,19 +23,23 @@ L'activitat ha estat realitzada per:
 [Eduard Ferrer Font](https://www.linkedin.com/in/eduard-ferrer-font/)
 
 ## Context
-Explicar en quin context específic s’han recollit les dades i argumentar perquè el lloc web seleccionat és una font pertinent i fiable d’aquesta informació. Indicar l’adreça del lloc web.
+Els darrers anys, l'oferta de compra d'habitatges assequibles a Catalunya, i especialment a Barcelona, ha disminuit considerablement.
+Els motius que han portat a aquesta situació són varis, des d'un augment de la demanda per part de joves extrangers, la gentrificació d'algunes zones de la ciutat, falles en les polítiques de construcció d'habitatge protegit, reconversió d'habitatges en pisos turístics, etc.
+En aquest context, aquest projecte té com a objectiu recollir dades sobre la oferta de venta de pisos a Barcelona a través del portal immobiliari Idealista, el qual és un taulell d'anuncis immobiliaris referent en el sector que agrega la oferta de múltiples agències immobiliaris i particulars.
+
+URL: https://www.idealista.com/ca/
 
 ## Títol
 Web scraping per a la cerca d'immobles
 
 ## Descripció del dataset
-Per aquesta pràctica hem decidit desenvolupar una eina per a extreure 
+Per aquesta pràctica hem decidit desenvolupar una eina per a extreure
 informació rellevant de portals immobiliaris com ara idealista,
-habitaclia o fotocasa. 
+habitaclia o fotocasa.
 
 Tots dos estem cercant immobles actualment i ens ha semblat que donar
 resposta a una necessitat real era la millor manera d'aproximar-nos a
-l'activitat. 
+l'activitat.
 
 Els objectius de la solució són:
 - Extreure les dades de les plataformes de compra-venda i lloguer d'im-
@@ -44,8 +48,7 @@ mobles de manera automatitzada. (versió 1)
 sament que incloguin analítica de dades. (versió 2)
 
 ## Representació gràfica
-Dibuixar un esquema o diagrama que reflecteixi visualment
-el dataset i el projecte escollit.
+Dibuixar un esquema o diagrama que reflecteixi visualment el dataset i el projecte escollit.
 
 ## Contingut
 Explicar els camps que s’inclouen al dataset i el període de temps a què pertanyen les dades.
@@ -88,3 +91,4 @@ Realitzar un breu vídeo explicatiu de la pràctica (màxim 10 minuts), que haur
 3. Lawson, R. (2015). Web Scraping with Python. Packt Publishing Ltd. Chapter 2. Scraping the Data.
 4. Simon Munzert, Christian Rubba, Peter Meißner, Dominic Nyhuis. (2015). Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining. John Wiley & Sons.
 5. freeCodeCamp. (2024). *How to Create and Sync Git and GitHub Repositories*. https://www.freecodecamp.org/news/create-and-sync-git-and-github-repositories/
+6. La crisis de la vivienda (OCT 2024). Barcelona Metròpolis. https://www.barcelona.cat/metropolis/es/contenidos/la-crisis-de-la-vivienda

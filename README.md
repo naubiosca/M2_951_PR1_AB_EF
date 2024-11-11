@@ -9,12 +9,9 @@ V0|27/10/24|Creació del repositori i preparació de la documentació.
 
 ## Descripció
 
-Aquest repositori conté la documentació per a la *Pràctica 1* de l'as-
-signatura *Tipologia i cicle de vida de les dades* amb codi *M2.951* del
-*Màster en Ciència de Dades* de la Universitat Oberta de Catalunya (UOC).
+Aquest repositori conté la documentació per a la *Pràctica 1* de l'assignatura *Tipologia i cicle de vida de les dades* amb codi *M2.951* del *Màster en Ciència de Dades* de la Universitat Oberta de Catalunya (UOC).
 
-En aquesta pràctica s'identifiquen i extreuen dades rellevants per a un
-projecte analític mitjançant eines específiques de *web scraping*.
+En aquesta pràctica s'identifiquen i extreuen dades rellevants per a un projecte analític mitjançant eines específiques de *web scraping*.
 
 ## Membres del grup
 
@@ -33,19 +30,13 @@ URL: https://www.idealista.com/ca/
 Web scraping per a la cerca d'immobles
 
 ## Descripció del dataset
-Per aquesta pràctica hem decidit desenvolupar una eina per a extreure
-informació rellevant de portals immobiliaris com ara idealista,
-habitaclia o fotocasa.
+Per aquesta pràctica hem decidit desenvolupar una eina per a extreure informació rellevant de portals immobiliaris com ara idealista, habitaclia o fotocasa.
 
-Tots dos estem cercant immobles actualment i ens ha semblat que donar
-resposta a una necessitat real era la millor manera d'aproximar-nos a
-l'activitat.
+Tots dos estem cercant immobles actualment i ens ha semblat que donar resposta a una necessitat real era la millor manera d'aproximar-nos a l'activitat.
 
 Els objectius de la solució són:
-- Extreure les dades de les plataformes de compra-venda i lloguer d'im-
-mobles de manera automatitzada. (versió 1)
-- Escollir les millors opcions per a inversió mitjançant eines de proces
-sament que incloguin analítica de dades. (versió 2)
+- Extreure les dades de les plataformes de compra-venda i lloguer d'immobles de manera automatitzada. (versió 1)
+- Escollir les millors opcions per a inversió mitjançant eines de processament que incloguin analítica de dades. (versió 2)
 
 ## Representació gràfica
 Dibuixar un esquema o diagrama que reflecteixi visualment el dataset i el projecte escollit.
@@ -63,6 +54,7 @@ Seleccionar una d'aquestes llicències pel dataset resultant i justificar el mot
 - Released Under CC BY-SA 4.0 License.
 - Database released under Open Database License, individual contents under Database Contents License.
 - Altres (especificar quina).
+
 ## Codi
 Codi implementat per a l’obtenció del dataset, preferiblement en Python o, alternativament, en R.
 - El codi haurà de situar-se a la carpeta /source del repositori.

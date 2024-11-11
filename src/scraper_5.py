@@ -26,8 +26,7 @@ while True:
     response = session.get(url+str(page))
     delay = time.time()-t0
     time.sleep(2 * delay)
-    print('While slept')
-
+    
     # Check response status
     if response.status_code == 200:
         # Parse the page content
@@ -35,8 +34,6 @@ while True:
         signoff = soup.find("div", class_="signoff")
         if signoff:
             print("No more results found")
-            print(links)
-
             break  # Break the loop if this message is found
 
         # Find all listing items
@@ -62,19 +59,10 @@ for link in links:
     # Sleeps for 10 times the estimated delay
     delay = time.time()-t0
     time.sleep(2 * delay)
-    print('Just slept')
 
     # Check response status
     if response.status_code == 200:
-        # # Parse the page content
-        # soup = BeautifulSoup(response.content, 'html.parser')
-        # title = soup.find('h1', class_='title').text
-        # section = soup.find('div', class_='section').text
-        # container1 = soup.find('div', class_='inner')
-        # ingredients = container1.text.replace('Ingredients','').strip()
-        # container2 = container1.find_next('div', class_='inner')
-        # steps = container2.text.replace('Elaboració','').strip()
-        # recipes = recipes
+        # Parse the page content
         soup = BeautifulSoup(response.content, 'html.parser')
         title = soup.find('h1', class_='title').text
         section = soup.find('div', class_='section').text
@@ -102,11 +90,11 @@ for link in links:
                                                   headers[2]:cols[2]}
         except:
             pass
+        
         try:
             table_mn = table_in.find_next('table')
             headers = [th.get_text(strip=True) for th in table_mn.\
                        find_all('tr')[0].find_all('td')]
-            print('hello')
             for row in table_mn.find_all('tr')[1:]:
                 # Find all data for each column
                 cols = [td.get_text(strip=True) for td in row.find_all('td')]
@@ -114,7 +102,7 @@ for link in links:
                                                   headers[2]:cols[2]}
         except:
             pass
-        print(nutrition_information)
+        
         df1 = pd.DataFrame({'Title':[title],
                            'Section':[section],
                            'Ingredients':[ingredients],
@@ -127,3 +115,4 @@ for link in links:
 
 with open('/Users/eferr/Downloads/csv_data.csv', 'w') as csv_file:
     csv = df.to_csv(path_or_buf=csv_file, index=False)
+print(f'Data has been saved in{csv_file.name}')

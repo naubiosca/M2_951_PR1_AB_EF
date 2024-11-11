@@ -22,8 +22,13 @@ page=0
 links=[]
 
 while True:
+    # Initialize timer
     t0 = time.time()
+
+    # Fetch HTML
     response = session.get(url+str(page))
+
+    # Sleep for 2 times the estimated delay
     delay = time.time()-t0
     time.sleep(2 * delay)
     
@@ -53,10 +58,10 @@ for link in links:
     # Initialize timer
     t0 = time.time()
 
-    # Get the HTML from the link
+    # Fetch HTML
     response = session.get(link)
 
-    # Sleeps for 10 times the estimated delay
+    # Sleep for 2 times the estimated delay
     delay = time.time()-t0
     time.sleep(2 * delay)
 
@@ -70,12 +75,16 @@ for link in links:
         ingredients = container1.text.replace('Ingredients','').strip()
         container2 = container1.find_next('div', class_='inner')
         instructions = container2.text.replace('Elaboració','').strip()
+        # Check if variation section exists
         try:
             variations = soup.find(string=re.compile('Variacions')).\
                 find_next('div', class_='content-panel').text.strip()
         except:
             pass
+        
         nutrition_information = {}
+        # Check if the first table containing nutrition information
+        # exists
         try:
             table_in = soup.find(string=re.compile('Informació nutricional')).\
             find_next('table')
@@ -90,7 +99,9 @@ for link in links:
                                                   headers[2]:cols[2]}
         except:
             pass
-        
+
+        # Check if the second table containing nutrition information
+        # exists        
         try:
             table_mn = table_in.find_next('table')
             headers = [th.get_text(strip=True) for th in table_mn.\
@@ -103,16 +114,19 @@ for link in links:
         except:
             pass
         
+        # Create DataFrame with the recipe data
         df1 = pd.DataFrame({'Title':[title],
                            'Section':[section],
                            'Ingredients':[ingredients],
                            'Instruction':[instructions],
                            'Variations':[variations],
                            'Nutrition Information':[nutrition_information]})
+        # Concatenate previous data and new data
         df = pd.concat([df,df1])
     else:
         print('Failed to retrieve the webpage. Status code:', response.status_code)
 
+# Open file in write mode and save the scraped data
 with open('/Users/eferr/Downloads/csv_data.csv', 'w') as csv_file:
-    csv = df.to_csv(path_or_buf=csv_file, index=False)
+    df.to_csv(path_or_buf=csv_file, index=False)
 print(f'Data has been saved in{csv_file.name}')

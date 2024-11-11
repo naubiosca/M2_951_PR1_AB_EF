@@ -17,39 +17,40 @@ session.headers.update({
 session.cookies.set('sessionid', '123456789')
 
 # Initialize variables
-# url='https://www.cuinacatalana.eu/ca/pag/receptes/?s=&pag='
-# page=0
-# links=[]
+url='https://www.cuinacatalana.eu/ca/pag/receptes/?s=&pag='
+page=0
+links=[]
 
-# while True:
-#     t0 = time.time()
-#     response = session.get(url+str(page))
-#     delay = time.time()-t0
-#     time.sleep(2 * delay)
-#     print('While slept')
+while True:
+    t0 = time.time()
+    response = session.get(url+str(page))
+    delay = time.time()-t0
+    time.sleep(2 * delay)
+    print('While slept')
 
-#     # Check response status
-#     if response.status_code == 200:
-#         # Parse the page content
-#         soup = BeautifulSoup(response.content, 'html.parser')
-#         signoff = soup.find("div", class_="signoff")
-#         if signoff:
-#             print("No more results found")
-#             print(links)
+    # Check response status
+    if response.status_code == 200:
+        # Parse the page content
+        soup = BeautifulSoup(response.content, 'html.parser')
+        signoff = soup.find("div", class_="signoff")
+        if signoff:
+            print("No more results found")
+            print(links)
 
-#             break  # Break the loop if this message is found
+            break  # Break the loop if this message is found
 
-#         # Find all listing items
-#         listings = soup.find_all("h2")
+        # Find all listing items
+        listings = soup.find_all("h2")
     
-#         for listing in listings:
-#             a_tag = listing.find("a")
-#             if a_tag and a_tag.get("href"):
-#                 links.append(a_tag.get("href"))
+        for listing in listings:
+            a_tag = listing.find("a")
+            if a_tag and a_tag.get("href"):
+                links.append(a_tag.get("href"))
    
-#         page = page + 1
-#     else:
-#         print('Failed to retrieve the webpage. Status code:', response.status_code)
+        page = page + 1
+    else:
+        print('Failed to retrieve the webpage. Status code:', response.status_code)
+        
 df = pd.DataFrame()
 for link in links:
     # Initialize timer

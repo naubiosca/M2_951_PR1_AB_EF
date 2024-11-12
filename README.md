@@ -66,7 +66,7 @@ S'ha escollit aquesta llicència per a fomentar l'ús d'aquestes dades sense res
 ## Codi
 El codi es troba a la carpeta **/source**
 Veure **requirements.txt** per a les llibreries utilitzades i la seva versió.
-Executar l'arxiu `scraper.py`. En finalitzar l'execució del codi, l'arxiu `csv_data.csv` serà creat al directori.
+Executar l'arxiu `main.py`. Les funcions estan a `scraper.py`. En finalitzar l'execució del codi, l'arxiu `csv_data.csv` serà creat al directori.
 
 ## Dataset
 El dataset està disponible a Zenodo amb[DOI: 10.5281/zenodo.14107062](https://zenodo.org/records/14107063)

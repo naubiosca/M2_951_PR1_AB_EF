@@ -13,6 +13,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter, Retry
+from fake_useragent import UserAgent
 
 
 #%% Class definition
@@ -28,9 +29,10 @@ class Scraper:
         self.retries = Retry(total=3, backoff_factor=0.1, status_forcelist=[500, 502, 503, 504])
         self.session = requests.Session()
         self.session.cookies.set('sessionid', '9423')
+        user_agent = UserAgent().random
         self.session.headers.update({
-            'User-Agent': 'my-app/0.0.1',
-            'Authorization': 'Bearer your_token_here'})
+            'User-Agent': user_agent})
+        print(f"User-Agent:",user_agent)
         self.session.mount('https://', HTTPAdapter(max_retries=self.retries))
 
     def __pull_html(self):
@@ -144,13 +146,3 @@ class Scraper:
             else:
                 print('Failed to retrieve the webpage. Status code:', response.status_code)
 
-# Usage
-#%% Run Scraper
-s = Scraper()
-#breakpoint()
-s.get_content()
-#%% Explore DataFrame
-s.data
-#%% Save to CSV
-s.data.to_csv('csv_data.csv', index=False)
-print('Data has been saved in csv_data.csv')

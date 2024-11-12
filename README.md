@@ -23,12 +23,8 @@ L'activitat ha estat realitzada per:
 [https://www.cuinacatalana.eu/ca/pag/receptes/](https://www.cuinacatalana.eu/ca/pag/receptes/)
 
 ## Context
-Amb l'objectiu de promoure una millor salut a través de l'alimentació, així com de promoure i explorar la cultura culinaria catalana, la Fundació Institut Català de la Cuina i de la Cultura Gastromòmica està realitzant, en col·laboració amb la UOC, un estudi sobre el varlor energètic i nutricional dels plats que conformen el receptari culinari català.
-
+Amb l'objectiu de promoure una millor salut a través de l'alimentació, així com de promoure i explorar la cultura culinaria catalana, la Fundació Institut Català de la Cuina i de la Cultura Gastromòmica està realitzant, en col·laboració amb la UOC, un estudi sobre el valor energètic i nutricional dels plats que conformen el receptari culinari català.
 En aquest context, el següent programa busca crear un repositori amb les dades obtingudes d'aquest estudi per a tal de poder fer-ne un posterior anàlisis.
-
-## Títol
-Web scraping per a la cerca de receptes de cuina catalana.
 
 ## Descripció del dataset
 Per aquesta pràctica hem decidit desenvolupar una eina per a extreure informació rellevant de receptes de cuina catalana, fent servir com a font la web de la Fundació Institut Català de la Cuina i de la Cultura Gastronòmica.
@@ -57,28 +53,26 @@ Per altra banda, estudis similars al proposat en aquesta pràctica, han permés 
 
 Per a determinar els requeriments legals de les dades utilitzades s'ha consultat l'arxiu `robots.txt` així com l'Avís Legal de la pàgina web. No s'hi ha trobar cap limitaicó en l'explotació de les dades.
 
+El dataset esà composat per un llistat de receptes. Cada recepta té els atributs "títol", "secció" (categoria), "Ingredients" (llistat d'ingredients), "Instruction" (descripció del procés d'elaboració), "Variations" (variacions de la recepta original i "Nutrition Information" (informació nutricional).
+
 ## Inspiració
 Aquest conjunt de dades preten servir de base de coneixement per a la creació d'enies que permetin la creació de receptes noves, la recomanació de receptes segons, trobar relacions entre patrons alimentaris i salud. Un cas d'éxit similar és el de l'estudi realitzat per Batra et al,en el que creen un dataset de 118171 receptes de tot el món amb objectius similars.
 
 ## Llicència
- 
-EL contingut d'aquest repositori està sotmés a una llicència MIT. Aquesta llicència permet la lliure distribució, contribució i modificació del contingut del repositori, tant del codi font com de les dades extretes.
+El contingut d'aquest repositori està sotmés a una llicència MIT. Aquesta llicència permet la lliure distribució, contribució i modificació del contingut del repositori, tant del codi font com de les dades extretes.
 Qualsevol distribució realitzada a partir del repositori original ha d'inlcoure també l'avís dels drets d'autor original, és a dir, el text de la llicència MIT. Podeu consultar la llicència a l'arxiu LICENCE del repositori.
 S'ha escollit aquesta llicència per a fomentar l'ús d'aquestes dades sense restriccions, conservant-ne l'autoria i exlcoent als autors de tota responsabilitat.
 
 ## Codi
-
 El codi es troba a la carpeta **/source**
 Veure **requirements.txt** per a les llibreries utilitzades i la seva versió.
-
+Executar l'arxiu `scraper.py`. En finalitzar l'execució del codi, l'arxiu `csv_data.csv` serà creat al directori.
 
 ## Dataset
 El dataset està disponible a Zenodo amb[DOI: 10.5281/zenodo.14107062](https://zenodo.org/records/14107063)
 
 ## Vídeo
-URL: 
-Realitzar un breu vídeo explicatiu de la pràctica (màxim 10 minuts), que haurà de comptar amb la participació dels dos integrants del grup. Al vídeo s'haurà de realitzar una presentació del projecte, destacant els punts més rellevants, tant de les respostes als apartats com del codi utilitzat per a extreure les dades. Indicar l'enllaç del vídeo (https://drive.google.com/...), que haurà d’estar al Google Drive de la UOC
-
+Enllaç a la memòria del projecte.
 
 ## Recursos
 1. Subirats, L., Calvo, M. (2018). Web Scraping. Editorial UOC.

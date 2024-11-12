@@ -3,6 +3,8 @@ import re
 import time
 import requests
 from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
 
 # Create a session object
 session = requests.Session()
@@ -52,11 +54,16 @@ while True:
         page = page + 1
     else:
         print('Failed to retrieve the webpage. Status code:', response.status_code)
-        
+
 df = pd.DataFrame()
 for link in links:
     # Initialize timer
     t0 = time.time()
+
+
+    # Set a number of retries
+    #retries = Retry(total=2, backoff_factor=0.5, status_forcelist=[500, 502, 503, 504])
+    #session.mount('https://', HTTPAdapter(max_retries=retries))
 
     # Fetch HTML
     response = session.get(link)
@@ -127,6 +134,6 @@ for link in links:
         print('Failed to retrieve the webpage. Status code:', response.status_code)
 
 # Open file in write mode and save the scraped data
-with open('/Users/eferr/Downloads/csv_data.csv', 'w') as csv_file:
+with open('csv_data.csv', 'w') as csv_file:
     df.to_csv(path_or_buf=csv_file, index=False)
 print(f'Data has been saved in{csv_file.name}')

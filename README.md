@@ -16,38 +16,44 @@ En aquesta pràctica s'identifiquen i extreuen dades rellevants per a un project
 ## Membres del grup
 
 L'activitat ha estat realitzada per:
-[Arnau Biosca Romanillos, PhD](https://www.linkedin.com/in/naubiosca/)
+[Arnau Biosca Romanillos, PhD](https://www.linkedin.com/in/naubiosca/) i 
 [Eduard Ferrer Font](https://www.linkedin.com/in/eduard-ferrer-font/)
 
 ## Context
-Els darrers anys, l'oferta de compra d'habitatges assequibles a Catalunya, i especialment a Barcelona, ha disminuit considerablement.
-Els motius que han portat a aquesta situació són varis, des d'un augment de la demanda per part de joves extrangers, la gentrificació d'algunes zones de la ciutat, falles en les polítiques de construcció d'habitatge protegit, reconversió d'habitatges en pisos turístics, etc.
-En aquest context, aquest projecte té com a objectiu recollir dades sobre la oferta de venta de pisos a Barcelona a través del portal immobiliari Idealista, el qual és un taulell d'anuncis immobiliaris referent en el sector que agrega la oferta de múltiples agències immobiliaris i particulars.
+Amb l'objectiu de promoure una millor salut a través de l'alimentació, així com de promoure i explorar la cultura culinaria catalana, la Fundació Institut Català de la Cuina i de la Cultura Gastromòmica està realitzant, en col·laboració amb la UOC, un estudi sobre el varlor energètic i nutricional dels plats que conformen el receptari culinari català.
+En aquest context, el següent programa busca crear un repositori amb les dades obtingudes d'aquest estudi per a tal de poder fer-ne un posterior anàlisis.
 
-URL: https://www.idealista.com/ca/
+URL: https://www.cuinacatalana.eu/ca/pag/receptes/
 
 ## Títol
-Web scraping per a la cerca d'immobles
+Web scraping per a la cerca de receptes de cuina catalana.
 
 ## Descripció del dataset
-Per aquesta pràctica hem decidit desenvolupar una eina per a extreure informació rellevant de portals immobiliaris com ara idealista, habitaclia o fotocasa.
-
-Tots dos estem cercant immobles actualment i ens ha semblat que donar resposta a una necessitat real era la millor manera d'aproximar-nos a l'activitat.
+Per aquesta pràctica hem decidit desenvolupar una eina per a extreure informació rellevant de receptes de cuina catalana, fent servir com a font la web de la Fundació Institut Català de la Cuina i de la Cultura Gastronòmica.
+El dataset està composat per aproximadament 900 receptes de cuina, de les quals es disposa el nom, els ingredients, el procés d'elaboració, una categoria i, en determinats casos, el seu valor nutricional, així com variacions.
 
 Els objectius de la solució són:
-- Extreure les dades de les plataformes de compra-venda i lloguer d'immobles de manera automatitzada. (versió 1)
-- Escollir les millors opcions per a inversió mitjançant eines de processament que incloguin analítica de dades. (versió 2)
+- Extreure les dades de les receptes de cuina de pàgines webs rellevants (versió 1)
+- Disposar de les dade sen format estandaritzat i ordenat per a la seva posterior explitació.
+- Realitzar estudis sobre les dades obtingudes. Alguns casos d'us pot ser la recerca de noves receptes, la recuperació de receptes en desús o la optimització de dietes, l'estudi de l'alimentació catalana. (versió 2)
 
 ## Representació gràfica
-Dibuixar un esquema o diagrama que reflecteixi visualment el dataset i el projecte escollit.
+
+![img.png](img.png)
 
 ## Contingut
-Explicar els camps que s’inclouen al dataset i el període de temps a què pertanyen les dades.
+El dataset esà composat per un llistat de receptes. Cada recepta té els atributs "títol", "secció" (categoria), "Ingredients" (llistat d'ingredients), "Instruction" (descripció del procés d'elaboració), "Variations" (variacions de la recepta original i "Nutrition Informatio" (informació nutricional).)
 ## Propietari
-Presentar el propietari del conjunt de dades. És necessari incloure cites d'anàlisis anteriors o, en cas de no  haver-n’hi, justificar aquesta cerca amb anàlisis similars. Indiqueu quins passos s’han seguit per actuar d’acord amb els principis ètics i legals en el context del projecte escollit.
+El propierati del conjunt de dades és la Fundació Institut Català de la Cuina i de la Cultura Gasdtronòmica. Anteriorment s'han realitzat estudis i publicacions amb algunes de les dades del dataset. Destaquem les publicacions presents a https://www.uoc.edu/opencms_portal2/opencms/CA/unesco-chair-food-culture-development/publications/list.html.
+Per altra banda, estudis similars al proposat en aquesta pràctica, han permés la creació de datasets de receptes per facilitar la recerca de l'espai culinari (receptes, ingredients, processos de cocció, tècniques, patrons d'alimentació) i associacions amb els sabors i la salud: https://pubmed.ncbi.nlm.nih.gov/33238002/
+Per a determinar els requeriments legals de les dades utilitzades s'ha consultat l'arxiu robots.txt així com l'Avís Legal de la pàgina web. No s'hi ha trobar cap limitaicó en l'explotació de les dades.
 ## Inspiració
-Explicar per què pot ser interessant aquest conjunt de dades i quines preguntes s’hi pretenen respondre. És necessari comparar amb les anàlisis anteriors o anàlisis similars presentades a l’apartat 6.
+Aquest conjunt de dades preten servir de base de coneixement per a la creació d'enies que permetin la creació de receptes noves, la recomanació de receptes segons, trobar relacions entre patrons alimentaris i salud. Un cas d'éxit similar és el de l'estudi realitzat per Batra et al,en el que creen un dataset de 118171 receptes de tot el món amb objectius similars.
 ## Llicència
+
+*** 
+
+
 Seleccionar una d'aquestes llicències pel dataset resultant i justificar el motiu de la seva selecció. Exemples de llicències que poden considerar-se:
 - Released Under CC0: Public Domain License.
 - Released Under CC BY-NC-SA 4.0 License.
@@ -84,3 +90,5 @@ Realitzar un breu vídeo explicatiu de la pràctica (màxim 10 minuts), que haur
 4. Simon Munzert, Christian Rubba, Peter Meißner, Dominic Nyhuis. (2015). Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining. John Wiley & Sons.
 5. freeCodeCamp. (2024). *How to Create and Sync Git and GitHub Repositories*. https://www.freecodecamp.org/news/create-and-sync-git-and-github-repositories/
 6. La crisis de la vivienda (OCT 2024). Barcelona Metròpolis. https://www.barcelona.cat/metropolis/es/contenidos/la-crisis-de-la-vivienda
+7. Devansh B. et al. RecipeDB: a resource for exploring recipes, Database, Volume 2020, 2020, baaa077, https://doi.org/10.1093/database/baaa077. 
+8. https://www.uoc.edu/opencms_portal2/opencms/CA/unesco-chair-food-culture-development/publications/list.html

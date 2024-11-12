@@ -1,7 +1,5 @@
 # Pràctica 1: Com podem capturar les dades de la web?
-## Notes
-vmorantc@uoc.edu
-veure repo > https://github.com/jmoreiras-uoc/tcvd-formato-practica1
+
 ## Versions
 Versió|Data|Descripció dels canvis
 -|-|-
@@ -19,7 +17,7 @@ L'activitat ha estat realitzada per:
 [Eduard Ferrer Font](https://www.linkedin.com/in/eduard-ferrer-font/)
 
 ## Context
-Amb l'objectiu de promoure una millor salut a través de l'alimentació, així com de promoure i explorar la cultura culinaria catalana, la Fundació Institut Català de la Cuina i de la Cultura Gastromòmica està realitzant, en col·laboració amb la UOC, un estudi sobre el varlor energètic i nutricional dels plats que conformen el receptari culinari català.
+Amb l'objectiu de promoure una millor salut a través de l'alimentació, així com de promoure i explorar la cultura culinaria catalana, la Fundació Institut Català de la Cuina i de la Cultura Gastromòmica està realitzant, en col·laboració amb la UOC, un estudi sobre el valor energètic i nutricional dels plats que conformen el receptari culinari català.
 En aquest context, el següent programa busca crear un repositori amb les dades obtingudes d'aquest estudi per a tal de poder fer-ne un posterior anàlisis.
 
 URL: https://www.cuinacatalana.eu/ca/pag/receptes/
@@ -33,12 +31,12 @@ El dataset està composat per aproximadament 900 receptes de cuina, de les quals
 
 Els objectius de la solució són:
 - Extreure les dades de les receptes de cuina de pàgines webs rellevants (versió 1)
-- Disposar de les dades en format estandaritzat i ordenat per a la seva posterior explotació (versió 2)
+- Disposar de les dades en format estandarditzat i ordenat per a la seva posterior explotació (versió 2)
 - Realitzar estudis sobre les dades obtingudes. Alguns casos d'us pot ser la recerca de noves receptes, la recuperació de receptes en desús o la optimització de dietes, l'estudi de l'alimentació catalana. (versió 2)
 
 ## Representació gràfica
 
-Aquesta representació gràfica mostra les relacions entre les dades d'una manera teòrica i com a proposta d'estructura que podria implementar-se per a la seva seva explotació posterior.
+Aquesta representació gràfica mostra les relacions entre les dades d'una manera teòrica i com a proposta d'estructura que podria implementar-se per a la seva explotació posterior.
 Per tant, aquesta represetnació no correspon a la estructura original del dataset, el qual es troba sense processar i guardat en format CSV.
 
 ![img.png](img.png)

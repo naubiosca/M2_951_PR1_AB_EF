@@ -37,10 +37,12 @@ Per tant, aquesta represetnació no correspon a la estructura original del datas
 
 ## Contingut
 El dataset esà composat per un llistat de receptes. Cada recepta té els atributs "títol", "secció" (categoria), "Ingredients" (llistat d'ingredients), "Instruction" (descripció del procés d'elaboració), "Variations" (variacions de la recepta original i "Nutrition Informatio" (informació nutricional).)
+
 ## Propietari
 El propierati del conjunt de dades és la Fundació Institut Català de la Cuina i de la Cultura Gasdtronòmica. Anteriorment s'han realitzat estudis i publicacions amb algunes de les dades del dataset. Destaquem les publicacions presents a https://www.uoc.edu/opencms_portal2/opencms/CA/unesco-chair-food-culture-development/publications/list.html.
 Per altra banda, estudis similars al proposat en aquesta pràctica, han permés la creació de datasets de receptes per facilitar la recerca de l'espai culinari (receptes, ingredients, processos de cocció, tècniques, patrons d'alimentació) i associacions amb els sabors i la salud: https://pubmed.ncbi.nlm.nih.gov/33238002/
 Per a determinar els requeriments legals de les dades utilitzades s'ha consultat l'arxiu robots.txt així com l'Avís Legal de la pàgina web. No s'hi ha trobar cap limitaicó en l'explotació de les dades.
+
 ## Inspiració
 Aquest conjunt de dades preten servir de base de coneixement per a la creació d'enies que permetin la creació de receptes noves, la recomanació de receptes segons, trobar relacions entre patrons alimentaris i salud. Un cas d'éxit similar és el de l'estudi realitzat per Batra et al,en el que creen un dataset de 118171 receptes de tot el món amb objectius similars.
 
@@ -52,6 +54,11 @@ S'ha escollit aquesta llicència per a fomentar l'ús d'aquestes dades sense res
 ## Codi
 El codi es troba a la carpeta **/source**
 Veure **requirements.txt** per a les llibreries utilitzades i la seva versió.
+Executar l'arxiu scraper_6.py. En finalitzar l'execusió del codi, l'arxiu csv_data.csv serà creat al direcori /dataset.
+
+n apartat on es descrigui com utilitzar el codi generat. Haurà
+d'incloure informació sobre els possibles paràmetres que admeti el
+script i un o diversos exemples replicables del seu ús.
 
 
 ## Dataset

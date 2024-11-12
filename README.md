@@ -44,7 +44,8 @@ Els objectius de la solució són:
 Aquesta representació gràfica mostra les relacions entre les dades d'una manera teòrica i com a proposta d'estructura que podria implementar-se per a la seva seva explotació posterior.
 
 Per tant, aquesta representació no correspon a la estructura original del dataset, el qual es troba sense processar i guardat en format CSV.
-![img.png](img.png)
+
+<img src="img.png" alt="Representació ideal de les dades" width=500>
 
 ## Contingut
 El dataset esà composat per un llistat de receptes. Cada recepta té els atributs "títol", "secció" (categoria), "Ingredients" (llistat d'ingredients), "Instruction" (descripció del procés d'elaboració), "Variations" (variacions de la recepta original i "Nutrition Information" (informació nutricional).
@@ -58,9 +59,9 @@ Per a determinar els requeriments legals de les dades utilitzades s'ha consultat
 
 ## Inspiració
 Aquest conjunt de dades preten servir de base de coneixement per a la creació d'enies que permetin la creació de receptes noves, la recomanació de receptes segons, trobar relacions entre patrons alimentaris i salud. Un cas d'éxit similar és el de l'estudi realitzat per Batra et al,en el que creen un dataset de 118171 receptes de tot el món amb objectius similars.
-## Llicència
 
-*** 
+## Llicència
+ 
 EL contingut d'aquest repositori està sotmés a una llicència MIT. Aquesta llicència permet la lliure distribució, contribució i modificació del contingut del repositori, tant del codi font com de les dades extretes.
 Qualsevol distribució realitzada a partir del repositori original ha d'inlcoure també l'avís dels drets d'autor original, és a dir, el text de la llicència MIT. Podeu consultar la llicència a l'arxiu LICENCE del repositori.
 S'ha escollit aquesta llicència per a fomentar l'ús d'aquestes dades sense restriccions, conservant-ne l'autoria i exlcoent als autors de tota responsabilitat.
